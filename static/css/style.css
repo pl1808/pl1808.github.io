@@ -865,7 +865,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   margin-left: 0;
 }
 .header-10 .navbar .nav > li > a {
-  padding: 29px 0 27px;
+  padding: 25px 0 25px;
   font-size: 17px;
   font-weight: normal;
   color: #7f8c8d;
@@ -900,7 +900,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   font-weight: 500;
 }
 .header-10 .navbar .navbar-toggle {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .header-10-sub {
   position: relative;
