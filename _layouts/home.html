@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+        {% include meta.html %}
+
+            <!--[if lt IE 9]>
+              <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="shortcut icon" href="startup/flat-ui/images/favicon.ico">
+        
+        <link rel="stylesheet" href="startup/flat-ui/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="startup/flat-ui/css/flat-ui.css">
+        <!-- Using only with Flat-UI (free)-->
+        <link rel="stylesheet" href="startup/common-files/css/icon-font.css">
+        <!-- end -->
+        <link rel="stylesheet" href="startup/common-files/css/animations.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        
+    </head>
+
+    <body>
+        <div class="page-wrapper"><header class="header-10">
+    {% include nav.html %}
+    <div class="header-background"></div>
+</header>
+<section class="header-10-sub v-center">
+    <div class="background">&nbsp;</div>
+    <div>
+        <div class="container">
+            <div class="hero-unit">
+                <h1>The Albatross Club</h1>
+                <p>Racehorse ownership + exclusive events</p>
+            </div>
+        </div>
+    </div>
+    <a class="control-btn fui-arrow-down" href="#club"> </a>
+</section>
+
+<section id="club" class="blog-2">
+    <div class="background hidden-xs"><div class="container" style="margin-left: 0;">
+            <div class="row" style="height:100%;">
+                <div class="col-sm-5" style="height:100%;padding: 0; background-image: url('images/frankieascot.jpg');background-size: cover;background-position: center;">                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 col-sm-offset-5">
+                <h3>
+                    Welcome to The Albatross Club
+                </h3>
+                <div class="promo">
+                    <h4>
+                        We provide members with all the fun and enjoyment of racehorse ownership coupled with a series of exclusive annual events.
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-3">
+    <div>
+        <!--div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="img">
+                        <img src="images/winners.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div><hr/-->
+        <div class="container">
+            <div class="row features">
+                <div class="col-sm-3">
+                    <h6>Success</h6>
+
+                    <p>An invitation only racing club with a track record of success.</p>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h6>Syndicates</h6>
+
+                    <p>Combined flat and national hunt syndicates.</p>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h6>Events</h6>
+
+                    <p>Annual luxury events schedule with great networking opportunities.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="row features">
+                <div class="col-sm-3">
+                    <h6>Trainers + Jockeys</h6>
+
+                    <p>Working with the world premier trainers and retained jockeys.</p>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h6>Celebrity</h6>
+
+                    <p>Celebrity ambassadors endorse the club and own shares in the horses.</p>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+                    <h6>Winning</h6>
+
+                    <p>A focus on winning and all round fun with potential high returns.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="membership" class="contacts-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h3>Membership</h3>
+            </div>
+        </div>
+
+    <div class="container">
+        <!--div class="row features">
+            <div class="col-sm-5 col-sm-offset-1">
+            </div>
+            <div class="col-sm-5">
+            </div>
+        </div-->
+        <div class="row features">
+            <div class="col-sm-6">
+                <h6>Another level</h6>
+
+                <p>The Albatross Club is unique membership, which brings the enjoyment and passion of syndicated racehorse ownership experience to another level.</p>
+                <h6>Racehorse ownership</h6>
+
+                <p>As a member you will become part of a syndicate that owns two horses, both flat and national hunt stabled with two of the country's leading trainers.</p>
+                <h6>Stable tours</h6>
+
+                <p>You will be invited to exclusive stable tours, to take part in golf days staged on some of the country's best golf courses, and enjoy fine dining and social experiences.</p>
+            </div>
+            <div class="col-sm-6">
+                <h6>Celebrity</h6>
+
+                <p>You will have access to a host of sports stars both past and present at our events and be able to read and watch exclusive interviews from our ambassadors, who include classic winning jockey Frankie Dettori, Grade 1 winning Jockey Jim Crowley, Channel 4's Grand Nation Wining Jockey Jim Crowley and, former Open Champion Darren Clarke and Ryder Cup golfer Lee Westwood.</p>
+            <h3 style="margin-bottom:15px;">Get in touch</h3>
+            <div class="phone col-sm-6">
+                <big>02077777777</big>
+                AVAILABLE AT 12PM - 18PM
+            </div>
+            </div>
+        </div>
+    </div>
+<hr/>
+
+        <div class="row">
+            <form>
+            <div class="col-sm-6">
+                <label class="h6">Name / Last Name</label>
+                <input type="text" class="form-control">
+                <label class="h6">E-mail</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-sm-6">
+                    <label class="h6">Message</label>
+                    <textarea rows="7" class="form-control"></textarea>
+                    <button type="submit" class="btn btn-primary"><span class="fui-mail"></span></button>
+                </div>
+            </form>
+        </div>
+
+            <!--div class="col-sm-4 col-sm-offset-1">
+                <div class="additional">
+                    <h6>Benefits of membership</h6>
+                    <p>As a member you will become part of a syndicate that owns two horses, both flat and national hunt stabled with two of the country's leading trainers.</p>
+                    <p>You will be invited to exclusive stable tours, to take part in golf days staged on some of the country's best golf courses, and enjoy fine dining and social experiences.</p>
+                    <p>You will have access to a host of sports stars both past and present at our events and be able to read and watch exclusive interviews from our ambassadors, who include classic winning jockey Frankie Dettori, Grade 1 winning Jockey Jim Crowley, Channel 4's Grand Nation Wining Jockey Jim Crowley and, former Open Champion Darren Clarke and Ryder Cup golfer Lee Westwood.</p>
+                    <p>The Albatross Club is unique membership, which brings the enjoyment and passion of syndicated racehorse ownership experience to another level.</p>
+                </div>
+            </div-->
+    </div>
+</section>
+
+<section class="blog-1">
+    <div class="container">
+        <div class="boxes">
+            <div class="box-1"><img src="images/hoofit2.jpg"/></div>
+            <div class="box-2"><img src="images/hoofit2.jpg"/></div>
+            <div class="box-3"><img src="images/hoofit2.jpg"/></div>
+            <div class="box-4"><img src="images/hoofit2.jpg"/></div>
+        </div>
+    </div>
+</section>
+
+
+<section id="trainers-jockeys" class="crew-2">
+    <div class="container">
+        <h3>Jockeys and Trainers</h3>
+
+        <div class="members">
+            <div class="member-wrapper">
+                <div class="member">
+                    <div class="photo-wrapper">
+                        <div class="photo"><img src="startup/common-files/img/crew/vladimir-k.png" alt=""></div>
+                        <div class="name">Vladimir K.</div>
+                        <div class="position">UI Designer</div>
+                    </div>
+                    <div class="info">
+                        Easy to change and easy to create new elements with color swatches.
+
+                        <div class="social-btns">
+                            <a href="#">
+                                <div class="fui-vimeo"></div>
+                                <div class="fui-vimeo"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-facebook"></div>
+                                <div class="fui-facebook"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-twitter"></div>
+                                <div class="fui-twitter"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-wrapper">
+                <div class="member">
+                    <div class="photo-wrapper">
+                        <div class="photo"><img src="startup/common-files/img/crew/sergey-s.png" alt=""></div>
+                        <div class="name">Sergey S.</div>
+                        <div class="position">UI Designer</div>
+                    </div>
+                    <div class="info">
+                        Easy to change and easy to create new elements with color swatches.
+
+                        <div class="social-btns">
+                            <a href="#">
+                                <div class="fui-vimeo"></div>
+                                <div class="fui-vimeo"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-facebook"></div>
+                                <div class="fui-facebook"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-twitter"></div>
+                                <div class="fui-twitter"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-wrapper">
+                <div class="member">
+                    <div class="photo-wrapper">
+                        <div class="photo"><img src="startup/common-files/img/crew/adrian-v.png" alt=""></div>
+                        <div class="name">Adrian V.</div>
+                        <div class="position">Founder</div>
+                    </div>
+                    <div class="info">
+                        Easy to change and easy to create new elements with color swatches.
+
+                        <div class="social-btns">
+                            <a href="#">
+                                <div class="fui-vimeo"></div>
+                                <div class="fui-vimeo"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-facebook"></div>
+                                <div class="fui-facebook"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-twitter"></div>
+                                <div class="fui-twitter"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="members">
+            <div class="member-wrapper">
+                <div class="member">
+                    <div class="photo-wrapper">
+                        <div class="photo"><img src="startup/common-files/img/crew/edvard-k.png" alt=""></div>
+                        <div class="name">Vladimir K.</div>
+                        <div class="position">UI Designer</div>
+                    </div>
+                    <div class="info">
+                        Easy to change and easy to create new elements with color swatches.
+
+                        <div class="social-btns">
+                            <a href="#">
+                                <div class="fui-vimeo"></div>
+                                <div class="fui-vimeo"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-facebook"></div>
+                                <div class="fui-facebook"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-twitter"></div>
+                                <div class="fui-twitter"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-wrapper">
+                <div class="member">
+                    <div class="photo-wrapper">
+                        <div class="photo"><img src="startup/common-files/img/crew/oxana-n.png" alt=""></div>
+                        <div class="name">Sergey S.</div>
+                        <div class="position">UI Designer</div>
+                    </div>
+                    <div class="info">
+                        Easy to change and easy to create new elements with color swatches.
+
+                        <div class="social-btns">
+                            <a href="#">
+                                <div class="fui-vimeo"></div>
+                                <div class="fui-vimeo"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-facebook"></div>
+                                <div class="fui-facebook"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-twitter"></div>
+                                <div class="fui-twitter"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-wrapper">
+                <div class="member">
+                    <div class="photo-wrapper">
+                        <div class="photo"><img src="startup/common-files/img/crew/tatiana-y.png" alt=""></div>
+                        <div class="name">Adrian V.</div>
+                        <div class="position">Founder</div>
+                    </div>
+                    <div class="info">
+                        Easy to change and easy to create new elements with color swatches.
+
+                        <div class="social-btns">
+                            <a href="#">
+                                <div class="fui-vimeo"></div>
+                                <div class="fui-vimeo"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-facebook"></div>
+                                <div class="fui-facebook"></div>
+                            </a>
+                            <a href="#">
+                                <div class="fui-twitter"></div>
+                                <div class="fui-twitter"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/.container-->
+</section>
+
+
+
+<section id="team" class="crew-4">
+    <div class="container">
+        <h3 style="float:left;">The Albatross Club Team</h3>
+
+        <div class="members">
+            
+            {% for page in site.posts %}
+                {% if page.is-profile %}
+                    <div class="member-wrapper">
+                        <div class="member">
+                            <div class="photo-wrapper">
+                                <div class="photo"><img src="{{page.image-path}}" alt="Ross" style="display:block;"></div>
+                            </div>
+                            <div class="info">
+
+                                <div class="name">{{page.name}}</div>
+                                
+                                {{page.excerpt}}
+
+                                <div class="contacts">
+                                    <a href="#">http://vladimirkudinov.com</a><br>
+                                    <a href="#">@stSilent</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                {% endif %}   <!-- resource-p -->
+            {% endfor %}  <!-- page -->
+            
+
+            <!--div class="member-wrapper">
+                <div class="member">
+                    <div class="photo-wrapper">
+                        <div class="photo"><img src="startup/common-files/img/crew/sergey-s.png" alt=""></div>
+                        <div class="overlay">
+                            <a href="#"><span class="fui-vimeo"></span></a>
+                            <a href="#"><span class="fui-facebook"></span></a>
+                            <a href="#"><span class="fui-twitter"></span></a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="name">Sergey Shmidt</div>
+                        <b>Designer</b> who makes easy to change and easy to create new elements.
+
+                        <div class="contacts">
+                            <a href="#">http://vladimirkudinov.com</a><br>
+                            <a href="#">@stSilent</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-wrapper">
+                <div class="member">
+                    <div class="photo-wrapper">
+                        <div class="photo"><img src="startup/common-files/img/crew/adrian-v.png" alt=""></div>
+                        <div class="overlay">
+                            <a href="#"><span class="fui-vimeo"></span></a>
+                            <a href="#"><span class="fui-facebook"></span></a>
+                            <a href="#"><span class="fui-twitter"></span></a>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="name">Adrian Valeanu</div>
+                        <b>Designer</b> who makes easy to change and easy to create new elements.
+
+                        <div class="contacts">
+                            <a href="#">http://vladimirkudinov.com</a><br>
+                            <a href="#">@stSilent</a>
+                        </div>
+                    </div>
+                </div>
+            </div-->
+        </div>
+    </div>
+    <!--/.container-->
+</section>
+
+
+
+
+
+
+<footer class="footer-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div><a class="brand" href="#">The Albatross Club</a></div>
+            </div>
+            <nav>
+                <div class="col-sm-3">
+                    <h6>About</h6>
+                    <ul>
+                        <li><a href="#">The Club</a></li>
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">Latest news + events</a></li>
+                        <li><a href="#">Trainers + Jockeys</a></li>
+                        <li><a href="#">Team</a></li>
+                    </ul>
+                </div>
+                <!--div class="col-sm-2">
+                    <h6>Work</h6>
+                    <ul>
+                        <li><a href="#">Our Portfolio</a></li>
+                        <li><a href="#">Latest Work</a></li>
+                        <li><a href="#">Brands</a></li>
+                    </ul>
+                </div-->
+                <div class="col-sm-2">
+                    <h6>Legal</h6>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col-sm-3">
+                <h6>Follow us</h6>
+                <!--div class="input-group">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn" type="button">
+                            <span class="fui-arrow-right"> </span>
+                        </button>
+                    </span>
+                </div-->
+                <div class="social-btns">
+                    <a href="#">
+                        <div class="fui-facebook"></div>
+                        <div class="fui-facebook"></div>
+                    </a>
+                    <a href="#">
+                        <div class="fui-twitter"></div>
+                        <div class="fui-twitter"></div>
+                    </a>
+                    <a href="#">
+                        <div class="fui-vimeo"></div>
+                        <div class="fui-vimeo"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="startup/common-files/js/jquery-1.10.2.min.js"></script>
+            <script src="startup/common-files/js/jquery.bxslider.min.js"></script>
+            <script src="startup/common-files/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+            <script src="startup/common-files/js/jquery.sharrre.min.js"></script>
+            <script src="startup/flat-ui/js/bootstrap.min.js"></script>
+            <script src="startup/common-files/js/masonry.pkgd.min.js"></script>
+            <script src="startup/common-files/js/modernizr.custom.js"></script>
+            <script src="startup/common-files/js/page-transitions.js"></script>
+            <script src="startup/common-files/js/easing.min.js"></script>
+            <script src="startup/common-files/js/jquery.svg.js"></script>
+            <script src="startup/common-files/js/jquery.svganim.js"></script>
+            <script src="startup/common-files/js/jquery.backgroundvideo.min.js"></script>
+            <script src="startup/common-files/js/froogaloop.min.js"></script>
+            <script src="startup/common-files/js/startup-kit.js"></script>
+            <script>
+            // handle links with @href started with '#' only
+                $(document).on('click', 'a[href^="#"]', function(e) {
+                    // target element id
+                    var id = $(this).attr('href');                    
+                    // target element
+                    var $id = $(id);
+                    if ($id.length === 0) {
+                        return;
+                    }
+                    // prevent standard hash navigation (avoid blinking in IE)
+                    e.preventDefault();
+                    // top position relative to the document
+                    var pos = $(id).offset().top;
+                    // animated top scrolling
+                    $('body, html').animate({scrollTop: pos - 69},800);
+                });
+            </script>
+        <!--/div-->
+{% include analytics.html %}
+</body>
+</html>
