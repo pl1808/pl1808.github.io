@@ -191,9 +191,9 @@
     <div class="container">
         <div class="boxes">
             <div class="box-1"><img src="images/hoofit2.jpg"/></div>
-            <div class="box-2"><img src="images/hoofit2.jpg"/></div>
-            <div class="box-3"><img src="images/hoofit2.jpg"/></div>
-            <div class="box-4"><img src="images/hoofit2.jpg"/></div>
+            <div class="box-2"><img src="images/Hoof-It-the-horse.jpg"/></div>
+            <div class="box-3"><img src="images/producer.jpg"/></div>
+            <div class="box-4"><img src="images/crowley.jpg"/></div>
         </div>
     </div>
 </section>
@@ -382,8 +382,9 @@
 
 <section id="team" class="crew-4">
     <div class="container">
+    <div class="row">
         <h3 style="float:left;">The Albatross Club Team</h3>
-
+    </div>
         <div class="members">
             
             {% for page in site.posts %}
@@ -398,10 +399,15 @@
                                 <div class="name">{{page.name}}</div>
                                 
                                 {{page.excerpt}}
+                                <a href="{{ site.baseurl }}{{ page.url }}" class="read-more">Read More</a>
 
                                 <div class="contacts">
-                                    <a href="#">http://vladimirkudinov.com</a><br>
-                                    <a href="#">@stSilent</a>
+                                    {% if page.role %}
+                                    {{page.role}}<br>
+                                    {% endif %}
+                                    {% if page.twitter %}
+                                    <a href="https://www.twitter.com/{{page.twitter}}" target="_blank">@{{page.twitter}}</a>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
@@ -463,68 +469,8 @@
 
 
 
-<footer class="footer-6">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <div><a class="brand" href="#">The Albatross Club</a></div>
-            </div>
-            <nav>
-                <div class="col-sm-3">
-                    <h6>About</h6>
-                    <ul>
-                        <li><a href="#">The Club</a></li>
-                        <li><a href="#">Membership</a></li>
-                        <li><a href="#">Latest news + events</a></li>
-                        <li><a href="#">Trainers + Jockeys</a></li>
-                        <li><a href="#">Team</a></li>
-                    </ul>
-                </div>
-                <!--div class="col-sm-2">
-                    <h6>Work</h6>
-                    <ul>
-                        <li><a href="#">Our Portfolio</a></li>
-                        <li><a href="#">Latest Work</a></li>
-                        <li><a href="#">Brands</a></li>
-                    </ul>
-                </div-->
-                <div class="col-sm-2">
-                    <h6>Legal</h6>
-                    <ul>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="col-sm-3">
-                <h6>Follow us</h6>
-                <!--div class="input-group">
-                    <input type="text" class="form-control">
-                    <span class="input-group-btn">
-                        <button class="btn" type="button">
-                            <span class="fui-arrow-right"> </span>
-                        </button>
-                    </span>
-                </div-->
-                <div class="social-btns">
-                    <a href="#">
-                        <div class="fui-facebook"></div>
-                        <div class="fui-facebook"></div>
-                    </a>
-                    <a href="#">
-                        <div class="fui-twitter"></div>
-                        <div class="fui-twitter"></div>
-                    </a>
-                    <a href="#">
-                        <div class="fui-vimeo"></div>
-                        <div class="fui-vimeo"></div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>            <!-- Placed at the end of the document so the pages load faster -->
+{% include foot.html %}
+            <!-- Placed at the end of the document so the pages load faster -->
             <script src="startup/common-files/js/jquery-1.10.2.min.js"></script>
             <script src="startup/common-files/js/jquery.bxslider.min.js"></script>
             <script src="startup/common-files/js/jquery.scrollTo-1.4.3.1-min.js"></script>

@@ -412,6 +412,7 @@ label {
   line-height: 1;
   letter-spacing: -1px;
   color: inherit;
+  font-weight: 800;
 }
 h4,
 h5,
@@ -961,13 +962,15 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   background-image: url('../../images/YGTHorse.jpg');
   opacity: 20;
   filter: alpha(opacity=2000);
-  opacity: 0.2;
-  filter: alpha(opacity=20);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .header-10-sub .hero-unit {
-  padding: 0;
+  padding: 20px;
   margin: 0;
   background-color: transparent;
+  border: 3px solid white;
+  border-radius: 20px;
 }
 .header-10-sub .hero-unit h1 {
   margin: 0 0 30px;
@@ -975,7 +978,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   font-weight: normal;
   color: #ffffff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 800;
 }
 .header-10-sub .hero-unit p {
   font-size: 25px;
@@ -2929,6 +2932,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
 }
 .crew-4 .members .member-wrapper {
   display: table-cell;
+  vertical-align: top;
 }
 .crew-4 .members .member-wrapper:first-child + .member-wrapper {
   text-align: center;
