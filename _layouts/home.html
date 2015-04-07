@@ -31,7 +31,51 @@
     <div class="header-background"></div>
 </header>
 <section class="header-10-sub v-center">
-    <div class="background">&nbsp;</div>
+    <div class="background" id="bg1">
+    </div>
+    <div class="background" id="bg2">
+    </div>
+    <div class="background" id="bg3">
+    </div>
+    <div class="background" id="bg4">
+    </div>
+    <div class="background" id="bg5">
+    </div>
+    <!-- <ul class="cb-slideshow">
+    <li>
+        <span></span>
+        <div>
+            <h3>re·lax·a·tion</h3>
+        </div>
+    </li><li>
+        <span></span>
+        <div>
+            <h3>re·lax·a·tion</h3>
+        </div>
+    </li><li>
+        <span></span>
+        <div>
+            <h3>re·lax·a·tion</h3>
+        </div>
+    </li><li>
+        <span></span>
+        <div>
+            <h3>re·lax·a·tion</h3>
+        </div>
+    </li><li>
+        <span></span>
+        <div>
+            <h3>re·lax·a·tion</h3>
+        </div>
+    </li><li>
+        <span></span>
+        <div>
+            <h3>re·lax·a·tion</h3>
+        </div>
+    </li>
+    </ul> -->
+
+
     <div>
         <div class="container">
             <div class="hero-unit">
@@ -81,34 +125,40 @@
         <div class="container">
             <div class="row features">
                 <div class="col-sm-3">
+                    <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
                     <h6>Success</h6>
 
                     <p>An invitation only racing club with a track record of success.</p>
                 </div>
                 <div class="col-sm-3 col-sm-offset-1">
+                    <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
                     <h6>Syndicates</h6>
 
                     <p>Combined flat and national hunt syndicates.</p>
                 </div>
                 <div class="col-sm-3 col-sm-offset-1">
+                    <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
                     <h6>Events</h6>
 
                     <p>Annual luxury events schedule with great networking opportunities.</p>
                 </div>
             </div>
-            <hr>
+            <hr class="hidden-xs">
             <div class="row features">
                 <div class="col-sm-3">
+                    <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
                     <h6>Trainers + Jockeys</h6>
 
                     <p>Working with the world premier trainers and retained jockeys.</p>
                 </div>
                 <div class="col-sm-3 col-sm-offset-1">
+                    <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
                     <h6>Celebrity</h6>
 
                     <p>Celebrity ambassadors endorse the club and own shares in the horses.</p>
                 </div>
                 <div class="col-sm-3 col-sm-offset-1">
+                    <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
                     <h6>Winning</h6>
 
                     <p>A focus on winning and all round fun with potential high returns.</p>
@@ -162,15 +212,17 @@
         <div class="row">
             <form>
             <div class="col-sm-6">
-                <label class="h6">Name / Last Name</label>
+                <label class="h6">Your name</label>
                 <input type="text" class="form-control">
                 <label class="h6">E-mail</label>
+                <input type="text" class="form-control" placeholder="name@example.com">
+                <label class="h6">Referred by (Name)</label>
                 <input type="text" class="form-control">
             </div>
             <div class="col-sm-6">
                     <label class="h6">Message</label>
-                    <textarea rows="7" class="form-control"></textarea>
-                    <button type="submit" class="btn btn-primary"><span class="fui-mail"></span></button>
+                    <textarea class="form-control" style="height:192px;"></textarea>
+                    <button type="submit" class="btn btn-primary-inverse" style="width:100%;"><span class="fui-mail"></span></button>
                 </div>
             </form>
         </div>
@@ -503,6 +555,18 @@
                     // animated top scrolling
                     $('body, html').animate({scrollTop: pos - 69},800);
                 });
+                setInterval(replaceBg,5000);
+
+                var counter = 1;
+                var counterString = "1";
+
+                function replaceBg(){
+                    $("#bg"+counterString).animate({opacity:'0'},2000);
+                    counter += 1;
+                    counterString = String((counter % 5) + 1);
+                    $("#bg"+counterString).animate({opacity:'0.5'},2000)
+                }
+
             </script>
         <!--/div-->
 {% include analytics.html %}
