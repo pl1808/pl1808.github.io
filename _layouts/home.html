@@ -41,44 +41,9 @@
     </div>
     <div class="background" id="bg5">
     </div>
-    <!-- <ul class="cb-slideshow">
-    <li>
-        <span></span>
-        <div>
-            <h3>re·lax·a·tion</h3>
-        </div>
-    </li><li>
-        <span></span>
-        <div>
-            <h3>re·lax·a·tion</h3>
-        </div>
-    </li><li>
-        <span></span>
-        <div>
-            <h3>re·lax·a·tion</h3>
-        </div>
-    </li><li>
-        <span></span>
-        <div>
-            <h3>re·lax·a·tion</h3>
-        </div>
-    </li><li>
-        <span></span>
-        <div>
-            <h3>re·lax·a·tion</h3>
-        </div>
-    </li><li>
-        <span></span>
-        <div>
-            <h3>re·lax·a·tion</h3>
-        </div>
-    </li>
-    </ul> -->
-
-
     <div>
         <div class="container">
-            <div class="hero-unit">
+            <div class="hero-unit hero-unit-bordered">
                 <h1>The Albatross Club</h1>
                 <p>Racehorse ownership + exclusive events</p>
             </div>
@@ -254,42 +219,49 @@
 
 <section id="latest-news" class="content-3">
     <div>
+        {% for post in site.categories.news-updates limit: 1 %}
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 aligment">
-                    <h3>Here's the headline for the latest latest news</h3>
+                    <h3>{{post.title}}</h3>
                     <p>
-                        Some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text 
+                        {{post.excerpt}} 
                     </p>
+                    <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
                 </div>
                 <div class="col-sm-6">
-                    <div class="img">
-                        <img src="images/winners.jpg" alt="">
+                    <div class="img" style="max-width:100%;">
+                        <img src="{{post.image-path}}" alt="">
                     </div>
                 </div>
             </div>
-        </div>
+
         <hr/>
+        </div>
+        {% endfor %}
         <div class="container">
             <div class="row features">
-                <div class="col-sm-3">
-                    <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
-                    <h6>Latest 2</h6>
+                {% for post in site.categories.news-updates limit: 3 offset: 1 %}
+                <div class="col-sm-4">
+                    <img class="hidden-xs" src="{{post.image-path}}" style="margin-bottom:5px;">
+                    <h6>{{post.title}}</h6>
 
-                    <p>some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text </p>
+                    <p>{{post.excerpt}}</p>
+                    <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
                 </div>
-                <div class="col-sm-3 col-sm-offset-1">
+                {% endfor %}
+                <!--div class="col-sm-4 ">
                     <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
                     <h6>Latest 3</h6>
 
                     <p>some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text </p>
                 </div>
-                <div class="col-sm-3 col-sm-offset-1">
+                <div class="col-sm-4">
                     <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
                     <h6>Latest 4</h6>
 
                     <p>some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text </p>
-                </div>
+                </div-->
             </div><hr/>
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
@@ -304,7 +276,7 @@
 </section>
 
 
-<section id="trainers-jockeys" class="crew-2">
+<!--section id="trainers-jockeys" class="crew-2">
     <div class="container">
         <h3>Jockeys and Trainers</h3>
 
@@ -480,8 +452,7 @@
             </div>
         </div>
     </div>
-    <!--/.container-->
-</section>
+</section-->
 
 
 
@@ -491,8 +462,7 @@
         <h3 style="float:left;">The Albatross Club Team</h3>
     </div>
     <div class="row">
-            {% for page in site.posts %}
-                {% if page.is-profile %}
+            {% for page in site.categories.people-profiles %}
                 {% assign loopindex = forloop.index | modulo: 3 %}
                 {% if loopindex == 1 %}
                 <div class="members">
@@ -521,8 +491,7 @@
                         </div>
                     </div> 
                 {% if loopindex == 0 %}
-                </div>
-                {% endif %}    
+                </div>   
                 {% endif %}   <!-- resource-p -->
             {% endfor %}  <!-- page -->
     </div>

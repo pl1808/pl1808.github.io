@@ -1133,8 +1133,8 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   padding: 20px;
   margin: 0;
   background-color: rgba(00,00,00,0.4);
-  border: 2px solid white;
-  border-radius: 20px;
+  /*border: 2px solid white;
+  border-radius: 20px;*/
 }
 .header-10-sub .hero-unit h1 {
   margin: 0 0 30px;
