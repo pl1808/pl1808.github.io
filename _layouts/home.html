@@ -63,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-7 col-sm-offset-5">
-                <h3>
+                <h3 style="padding-bottom:35px;">
                     Welcome to The Albatross Club
                 </h3>
                 <div class="promo">
@@ -71,6 +71,9 @@
                         We provide members with all the fun and enjoyment of racehorse ownership coupled with a series of exclusive annual events.
                     </h4>
                 </div>
+                    <p>
+                        The Albatross Club is an exclusive racing club that specialises in syndicated racehorse ownership by bringing together groups of like minded, fun loving race goers that own a number of well bred national hunt and flat thoroughbred racehorses. The Albatross Club's members enjoy great days at the races together and get invited to unique, private experiences with champions of the sport and other celebrity members and ambassadors. The Albatross Club founders have bought and owned Group and Listed Handicap winners on both the flat and jumps with some of the top trainers in the country. Frankie Dettori and Jim Crowley are our ambassadorial jockeys and regularly ride for the Club as well as attending events with our other sporting members. If you do know a member of our club then we do hope you will join our club to experience the passion, excitement and fun of racehorse ownership.
+                    </p>
             </div>
         </div>
     </div>
@@ -224,6 +227,7 @@
             <div class="row">
                 <div class="col-sm-6 aligment">
                     <h3>{{post.title}}</h3>
+                    <p><em>{{post.date| date: "%-d %B %Y"}}</em></p>
                     <p>
                         {{post.excerpt}} 
                     </p>
@@ -241,15 +245,36 @@
         {% endfor %}
         <div class="container">
             <div class="row features">
-                {% for post in site.categories.news-updates limit: 3 offset: 1 %}
+                <div class="row">
+                {% for post in site.categories.news-updates limit: 2 offset: 1 %}
                 <div class="col-sm-4">
                     <img class="hidden-xs" src="{{post.image-path}}" style="margin-bottom:5px;">
-                    <h6>{{post.title}}</h6>
+                    <h6>{{post.title}}</h6><p style="font-size:small;"><em>{{post.date| date: "%-d %B %Y"}}</em></p>
 
-                    <p>{{post.excerpt}}</p>
-                    <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
+                    <p>{{post.excerpt}} <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
                 </div>
                 {% endfor %}
+                <div class="col-sm-4 hidden-xs" style="height:0;">
+                    <a class="twitter-timeline" href="https://twitter.com/ross88888" data-widget-id="587043813698490368">Tweets by @ross88888</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                </div>
+                <div class="row" style="margin-top:20px;">
+                {% for post in site.categories.news-updates limit: 2 offset: 3 %}
+                <div class="col-sm-4">
+                    <img class="hidden-xs" src="{{post.image-path}}" style="margin-bottom:5px;">
+                    <h6>{{post.title}}</h6><p style="font-size:small;"><em>{{post.date| date: "%-d %B %Y"}}</em></p>
+
+                    <p>{{post.excerpt}} <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
+                </div>
+                {% endfor %}
+                </div>
+                <div class="row hidden-sm hidden-md hidden-lg">
+                    <div class="col-sm-4 hidden-xs" style="height:0;">
+                    <a class="twitter-timeline" href="https://twitter.com/ross88888" data-widget-id="587043813698490368">Tweets by @ross88888</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+                </div>
                 <!--div class="col-sm-4 ">
                     <img class="hidden-xs" src="/images/running.jpg" style="margin-bottom:5px;">
                     <h6>Latest 3</h6>
@@ -469,9 +494,11 @@
                 {% endif %}
                     <div class="member-wrapper">
                         <div class="member">
+                            <a href="{{site.baseurl}}{{page.url}}">
                             <div class="photo-wrapper">
                                 <div class="photo"><img src="{{page.image-path}}" alt="Ross" style="display:block;"></div>
                             </div>
+                            </a>
                             <div class="info">
 
                                 <div class="name">{{page.name}}</div>
