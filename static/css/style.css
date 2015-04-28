@@ -740,6 +740,19 @@ section * {
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
+.background-no-opacity {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: 50% 50% no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .container {
   position: relative;
   z-index: 2;
@@ -1096,17 +1109,17 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
 }
 /*.header-10-sub .background */#bg1 {
   background-image: url('/images/1.jpg');
-  opacity: 20;
+ /* opacity: 20;
   filter: alpha(opacity=2000);
   opacity: 0.5;
-  filter: alpha(opacity=50);
+  filter: alpha(opacity=50);*/
 }
 /*.header-10-sub .background */#bg2 {
   background-image: url('/images/2.jpg');
-  opacity: 0;
+ /* opacity: 0;
   filter: alpha(opacity=2000);
   opacity: 0;
-  filter: alpha(opacity=50);
+  filter: alpha(opacity=50);*/
 }
 /*.header-10-sub .background */#bg3 {
   background-image: url('/images/3.jpg');
@@ -1205,11 +1218,11 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   font-weight: normal;
   color: #7f8c8d;
   color: #ffffff;
-  background: #000000;
+  background: #000000;/*
   opacity: 80;
   filter: alpha(opacity=8000);
   opacity: 0.8;
-  filter: alpha(opacity=80);
+  filter: alpha(opacity=80);*/
   position: absolute;
   left: 50%;
   bottom: 90px;
@@ -1223,11 +1236,11 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
 .header-10-sub .control-btn:hover,
 .header-10-sub .control-btn:focus,
 .header-10-sub .control-btn:active,
-.header-10-sub .control-btn.active {
+.header-10-sub .control-btn.active {/*
   opacity: 100;
   filter: alpha(opacity=10000);
   opacity: 1;
-  filter: alpha(opacity=100);
+  filter: alpha(opacity=100);*/
 }
 @media (max-width: 480px) {
   .header-10-sub .control-btn {
@@ -3046,7 +3059,7 @@ body > .navbar-collapse .navbar-search .btn-primary:hover {
   top: -100%;
 }
 .crew-2 .members .member:hover .photo-wrapper {
-  background-color: #000000;
+
 }
 .crew-2 .members .member:hover .photo {
   opacity: 40;

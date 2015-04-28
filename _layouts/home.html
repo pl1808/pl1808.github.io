@@ -31,28 +31,30 @@
     <div class="header-background"></div>
 </header>
 <section class="header-10-sub v-center">
-    <div class="background" id="bg1">
+    <div class="background-no-opacity" id="bg1">
     </div>
-    <div class="background" id="bg2">
+    <!--div class="background" id="bg2">
     </div>
     <div class="background" id="bg3">
     </div>
     <div class="background" id="bg4">
     </div>
     <div class="background" id="bg5">
-    </div>
+    </div-->
     <div>
         <div class="container">
             <div class="hero-unit hero-unit-bordered">
                 <h1>The Albatross Club</h1>
                 <p>Racehorse ownership + exclusive events</p>
             </div>
+
+    <a class="btn btn-primary" onclick="$('#club').slideDown();">Show</a>
         </div>
     </div>
     <a class="control-btn fui-arrow-down" href="#club"> </a>
 </section>
 
-<section id="club" class="blog-2">
+<section id="club" class="blog-2" style="display:none;">
     <div class="background hidden-xs"><div class="container" style="margin-left: 0;">
             <div class="row" style="height:100%;">
                 <div class="col-sm-5" style="height:100%;padding: 0; background-image: url('images/frankieascot.jpg');background-size: cover;background-position: center;">                    
@@ -77,6 +79,28 @@
             </div>
         </div>
     </div>
+</section>
+
+<section class="header-10-sub v-center">
+    <div class="background-no-opacity" id="bg2">
+    </div>
+    <!--div class="background" id="bg2">
+    </div>
+    <div class="background" id="bg3">
+    </div>
+    <div class="background" id="bg4">
+    </div>
+    <div class="background" id="bg5">
+    </div-->
+    <div>
+        <div class="container">
+            <div class="hero-unit hero-unit-bordered">
+                <h1>The Albatross Club</h1>
+                <p>Racehorse ownership + exclusive events</p>
+            </div>
+        </div>
+    </div>
+    <a class="control-btn fui-arrow-down" href="#club"> </a>
 </section>
 
 <section class="content-3">
@@ -234,8 +258,8 @@
                     <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
                 </div>
                 <div class="col-sm-6">
-                    <div class="img" style="max-width:100%;">
-                        <img src="{{post.image-path}}" alt="">
+                    <div class="photo-wrapper">
+                                <div class="photo"><img src="{{post.image-path}}" style="margin-bottom:5px;"></div>
                     </div>
                 </div>
             </div>
@@ -248,7 +272,9 @@
                 <div class="row">
                 {% for post in site.categories.news-updates limit: 2 offset: 1 %}
                 <div class="col-sm-4">
-                    <img class="hidden-xs" src="{{post.image-path}}" style="margin-bottom:5px;">
+                    <div class="photo-wrapper">
+                                <div class="photo"><img class="hidden-xs" src="{{post.image-path}}" style="margin-bottom:5px;"></div>
+                    </div>
                     <h6>{{post.title}}</h6><p style="font-size:small;"><em>{{post.date| date: "%-d %B %Y"}}</em></p>
 
                     <p>{{post.excerpt}} <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
@@ -262,7 +288,9 @@
                 <div class="row" style="margin-top:20px;">
                 {% for post in site.categories.news-updates limit: 2 offset: 3 %}
                 <div class="col-sm-4">
-                    <img class="hidden-xs" src="{{post.image-path}}" style="margin-bottom:5px;">
+                    <div class="photo-wrapper">
+                                <div class="photo"><img class="hidden-xs" src="{{post.image-path}}" style="margin-bottom:5px;"></div>
+                    </div>
                     <h6>{{post.title}}</h6><p style="font-size:small;"><em>{{post.date| date: "%-d %B %Y"}}</em></p>
 
                     <p>{{post.excerpt}} <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a></p>
@@ -496,7 +524,7 @@
                         <div class="member">
                             <a href="{{site.baseurl}}{{page.url}}">
                             <div class="photo-wrapper">
-                                <div class="photo"><img src="{{page.image-path}}" alt="Ross" style="display:block;"></div>
+                                <div class="photo"><img src="{{page.image-path}}" alt="{{page.name}}" style="display:block;"></div>
                             </div>
                             </a>
                             <div class="info">
@@ -565,17 +593,17 @@
                     // animated top scrolling
                     $('body, html').animate({scrollTop: pos - 69},800);
                 });
-                setInterval(replaceBg,5000);
+                // setInterval(replaceBg,5000);
 
-                var counter = 1;
-                var counterString = "1";
+                // var counter = 1;
+                // var counterString = "1";
 
-                function replaceBg(){
-                    $("#bg"+counterString).animate({opacity:'0'},2000);
-                    counter += 1;
-                    counterString = String((counter % 5) + 1);
-                    $("#bg"+counterString).animate({opacity:'0.5'},2000)
-                }
+                // function replaceBg(){
+                //     $("#bg"+counterString).animate({opacity:'0'},2000);
+                //     counter += 1;
+                //     counterString = String((counter % 5) + 1);
+                //     $("#bg"+counterString).animate({opacity:'0.5'},2000)
+                // }
 
             </script>
         <!--/div-->
