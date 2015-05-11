@@ -22,6 +22,8 @@
         <!-- end -->
         <link rel="stylesheet" href="startup/common-files/css/animations.css">
         <link rel="stylesheet" href="static/css/style.css">
+
+
         
     </head>
 
@@ -30,7 +32,7 @@
     {% include nav.html %}
     <div class="header-background"></div>
 </header>
-<section class="header-10-sub v-center">
+<section class="header-10-sub v-center" id="section-1">
     <div class="background-no-opacity" id="bg1">
     </div>
     <!--div class="background" id="bg2">
@@ -43,15 +45,18 @@
     </div-->
     <div>
         <div class="container">
-            <div class="hero-unit hero-unit-bordered">
-                <h1>The Albatross Club</h1>
-                <p>Racehorse ownership + exclusive events</p>
+            <div class="pic-overlay">
+                <div class="hero-unit">
+                    <h1>The Albatross Club</h1>
+                    <p>Racehorse ownership + exclusive events</p>
+                    <div style="width:100%;text-align:right;">
+                        <a href="#" style="padding:5px;font-size:16px;background-color:cornflowerblue;" onclick="$('#club').slideDown();setTimeout(function(){$('#club').scrollTop();},500);">More >></a>
+                    </div>
+                </div>
             </div>
-
-    <a class="btn btn-primary" onclick="$('#club').slideDown();">Show</a>
         </div>
     </div>
-    <a class="control-btn fui-arrow-down" href="#club"> </a>
+    <a class="control-btn fui-arrow-down" href="#section-2"> </a>
 </section>
 
 <section id="club" class="blog-2" style="display:none;">
@@ -81,7 +86,7 @@
     </div>
 </section>
 
-<section class="header-10-sub v-center">
+<section class="header-10-sub v-center" id="section-2">
     <div class="background-no-opacity" id="bg2">
     </div>
     <!--div class="background" id="bg2">
@@ -94,16 +99,21 @@
     </div-->
     <div>
         <div class="container">
-            <div class="hero-unit hero-unit-bordered">
-                <h1>The Albatross Club</h1>
-                <p>Racehorse ownership + exclusive events</p>
+            <div class="pic-overlay">
+                <div class="hero-unit">
+                    <h1>Our club's goals</h1>
+                    <p>Syndicates | Events | Winning</p>
+                    <div style="width:100%;text-align:right;">
+                        <a style="padding:5px;font-size:16px;background-color:cornflowerblue;" onclick="$('#goals').slideDown();$('#goals').scrollTop(50px);">More >></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <a class="control-btn fui-arrow-down" href="#club"> </a>
+    <a class="control-btn fui-arrow-down" href="#section-3"> </a>
 </section>
 
-<section class="content-3">
+<section class="content-3" id="goals" style="display:none;">
     <div>
         <!--div class="container">
             <div class="row">
@@ -568,31 +578,37 @@
             <script src="startup/flat-ui/js/bootstrap.min.js"></script>
             <script src="startup/common-files/js/masonry.pkgd.min.js"></script>
             <script src="startup/common-files/js/modernizr.custom.js"></script>
-            <script src="startup/common-files/js/page-transitions.js"></script>
             <script src="startup/common-files/js/easing.min.js"></script>
             <script src="startup/common-files/js/jquery.svg.js"></script>
             <script src="startup/common-files/js/jquery.svganim.js"></script>
             <script src="startup/common-files/js/jquery.backgroundvideo.min.js"></script>
             <script src="startup/common-files/js/froogaloop.min.js"></script>
+            <script src="startup/common-files/js/page-transitions.js"></script>
             <script src="startup/common-files/js/startup-kit.js"></script>
+                    <!--script src="startup/common-files/js/jquery.panelSnap.js"></script>
+        <script>
+          jQuery(function($) {
+            $('body').panelSnap();
+          });
+        </script-->
             <script>
             // handle links with @href started with '#' only
-                $(document).on('click', 'a[href^="/#"]', function(e) {
-                    // target element id
-                    var id = $(this).attr('href').substring(1);    
-                    console.log(id);
-                    // target element
-                    var $id = $(id);
-                    if ($id.length === 0) {
-                        return;
-                    }
-                    // prevent standard hash navigation (avoid blinking in IE)
-                    e.preventDefault();
-                    // top position relative to the document
-                    var pos = $(id).offset().top;
-                    // animated top scrolling
-                    $('body, html').animate({scrollTop: pos - 69},800);
-                });
+                // $(document).on('click', 'a[href^="/#"]', function(e) {
+                //     // target element id
+                //     var id = $(this).attr('href').substring(1);    
+                //     console.log(id);
+                //     // target element
+                //     var $id = $(id);
+                //     if ($id.length === 0) {
+                //         return;
+                //     }
+                //     // prevent standard hash navigation (avoid blinking in IE)
+                //     e.preventDefault();
+                //     // top position relative to the document
+                //     var pos = $(id).offset().top;
+                //     // animated top scrolling
+                //     $('body, html').animate({scrollTop: pos - 69},800);
+                // });
                 // setInterval(replaceBg,5000);
 
                 // var counter = 1;
