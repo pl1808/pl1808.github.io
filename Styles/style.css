@@ -1,0 +1,48 @@
+.FS-wrapper {
+	height:200%;
+	overflow-y: scroll;
+}
+
+.FS-pics {
+	background-size: cover;
+}
+
+.further-deets{
+	display: none;
+}
+
+.hero{
+	position: absolute;
+	float:top;
+	font-size: larger;
+	color: #fff;
+	top: 20%;
+	left: 10%;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.1);
+	width: 50%;
+	height: 20%;
+}
+
+.fp-controlArrow {
+    position: absolute;
+    z-index: 4;
+    top: 10%;
+    cursor: pointer;
+    opacity: 0.5;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -38px;
+}
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #fff transparent transparent;
+}
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #fff;
+}
