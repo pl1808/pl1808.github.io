@@ -23,7 +23,8 @@
 	$(document).ready(function() {
 		$('#fullpage').fullpage({
 			sectionsColor: ['#4A6FB1', '#939FAA', '#323539'],
-			scrollOverflow: true
+			scrollOverflow: true,
+			slidesNavigation: true
 		});
 	});
 	</script>
@@ -31,14 +32,29 @@
 </head>
 
 <body>
-<div style="position:fixed;bottom:0;height:40px;background-color:rgba(0,0,0,0.6);width:100%;z-index:1000;padding:0px;color:#fff;"><img href='/' src="/img/albatross-logo-web.jpg" height="40px"></img>
-</div>
+
+
+
+<ul id="menu">
+	<li data-menuanchor="Home"><a href="#Home">Home</a></li>
+	<li data-menuanchor="Power"><a href="#Power/2">About the club</a></li>
+	<li data-menuanchor="Excitement"><a href="#Excitement">Membership</a></li>
+	<li data-menuanchor="Ambition"><a href="#Ambition">Winners</a></li>
+	<li data-menuanchor="Passion"><a href="#Passion">Team</a></li>
+	<li data-menuanchor="Dedication"><a href="#Dedication">Dedication</a></li>
+</ul>
 
 <div id="fullpage">
-	<div class="section">
+
+
+
+	<div class="section" data-anchor="Home">
+		<div class="slide FS-pics" style="background-image:url('/img/albatross-logo-cmyk.svg');background-position: 50% 50%;background-color:#151516;background-size:contain;background-repeat:no-repeat;"></div>
+	</div>
+	<div class="section" data-anchor="Power">
 		<div class="slide FS-pics" style="background-image:url('/img/Slide-1_-Glasgow-Gailes-finish-line.jpg');background-position: 60% 60%"></div>
 		<div class="slide" style="background-image:url('/img/frankie-w-golf-club1.jpg');background-position: 20% 10%">
-			<div class="col-sm-6" style="position:absolute;margin-top:40px;margin-left:10px;font-size:xlarge;">
+			<div class="col-sm-6" style="position:absolute;margin-top:40px;margin-left:10px;font-size:x-large;">
 				Here's a quote from Frankie
 				<br>
 				<em>Frankie Dettori</em>
@@ -61,8 +77,8 @@
 	        </div>
 		</div>
 	</div>
-	<div class="section FS-pics" style="background-image:url('/img/Slide_2__Dubai_Racing.jpg');background-position: 60% 60%"></div>
-	<div class="section">
+	<div class="section FS-pics" style="background-image:url('/img/Slide_2__Dubai_Racing.jpg');background-position: 60% 60%"  data-anchor="Excitement"></div>
+	<div class="section" data-anchor="Ambition">
 	    <div class="slide FS-pics" style="background-image:url('/img/Slide_3__Poker_School_Winning_at_Kempton_Park.JPG');background-position: 37% 20%">
 		</div>
 	    <div class="slide FS-pics" style="background-image:url('/img/Hoof-It-the-horse.jpg');background-position: 60% 60%"></div>
@@ -70,7 +86,7 @@
 		<div class="slide FS-pics" style="background-image:url('/img/producer.jpg');background-position: 60% 60%"></div>
 	</div>
 
-	<div class="section">
+	<div class="section" data-anchor="Passion">
 	    <div class="slide FS-pics" style="background-image:url('/img/frankieascot.jpg');background-position: 50% 19%">
 		</div>
 	    <div class="slide FS-pics" style="background-image:url('/img/Hoof-It-the-horse.jpg');background-position: 60% 60%"></div>
@@ -78,7 +94,7 @@
 		<div class="slide FS-pics" style="background-image:url('/img/producer.jpg');background-position: 60% 60%"></div>
 	</div>
 
-	<div class="section">
+	<div class="section" data-anchor="Dedication">
 	    Dedication/commitment
 	</div>
 
@@ -88,5 +104,7 @@
 
 
 </div>
+
+
 </body>
 </html>
