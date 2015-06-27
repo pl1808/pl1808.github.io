@@ -79,10 +79,10 @@
 
 #menu {
   position: fixed;
-  background-color: rgba(21,21,22,0.4);
+  background-color: rgba(21,21,22,1);
   top: 0;
   left: 0;
-  height: 58px;
+  height: 53px;
   z-index: 70;
   width: 100%;
   padding: 0;
@@ -90,7 +90,7 @@
 }
 
 #menu li {
-    display:inline-block;
+/*    display:inline-block;
     margin: 10px;
     color: #000;
     background:#fff;
@@ -121,4 +121,4 @@
 }
 #menu li.active a{
     color: #fff;
-}
+}*/
