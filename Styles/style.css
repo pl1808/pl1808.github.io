@@ -88,6 +88,9 @@
   padding: 0;
   margin: 0;
 }
+.navbar-collapse{
+    background-color: #161621;
+}
 
 #menu li {
 /*    display:inline-block;
