@@ -92,7 +92,12 @@
     background-color: #161621;
 }
 
-#menu li {
+.li{
+    padding-left:12px;
+}
+
+/*#menu .li {
+    padding-left: 10px;
 /*    display:inline-block;
     margin: 10px;
     color: #000;
@@ -123,5 +128,18 @@
     display:block;
 }
 #menu li.active a{
-    color: #fff;
-}*/
+    color: #fff;*/
+}
+
+.quote {
+    position:absolute;
+    margin-top:40px;
+    margin-left:10px;
+    font-size: 24px;
+}
+
+@media min-width: 720px{
+    .quote {
+        font-size:36px;
+    }
+}
